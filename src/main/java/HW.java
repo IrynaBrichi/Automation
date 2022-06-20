@@ -1,3 +1,4 @@
+/*import com.codeborne.selenide.SelenideElement;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -14,7 +15,7 @@ import static com.codeborne.selenide.files.DownloadActions.click;
 public class HW {
     @Test
     public void orderCheck() {
-        open("http://automationpractice.com/index.php");
+        SelenideElement page =("http://automationpractice.com/index.php");
         $(".login").click();
         $("#email").sendKeys("i123@gmail.com");
         $("#passwd").sendKeys("12345");
@@ -82,12 +83,12 @@ public class HW {
         $("#contact-link").click();
         $("#id_contact").selectOption("Customer service");
         $("#desc_contact2").should(appear);
-        $(".selector").selectOptionByValue("Printed Dress");
-        $("#433539_order_products").selectOptionByValue("Printed Dress");
+        $("[name='id_order]").selectOption("NZTQWCGBG - 05/11/2022");
+        $("#433539_order_products").selectOption("Printed Dress - Color : Orange, Size : S");
         $("#message").sendKeys("I have a problem with my order. Could you help me?");
         $("#submitMessage").click();
 
 
 
     }
-}
+}*/
