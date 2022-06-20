@@ -1,4 +1,5 @@
 import com.codeborne.selenide.SelenideElement;
+import page.CreateAccountPage;
 
 import static com.codeborne.selenide.Selenide.$;
 
@@ -10,7 +11,7 @@ public class LoginPage {
     public static SelenideElement submitButton = $("#SubmitCreate");
 
     public CreateAccountPage login (String mail) {
-        email.setValue(mail);;
+        email.setValue(mail);
         submitButton.click();
         return new CreateAccountPage();
 
