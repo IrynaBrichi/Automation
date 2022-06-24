@@ -19,13 +19,11 @@ import utils.TestConfigSettings;
 import java.util.Map;
 import java.util.logging.Level;
 
-
 public class BaseTest {
     private static final String ALLURE = "Allure";
     public static final TestConfig CONFIG = TestConfigSettings.getInstance().getTestConfig();
-
     @BeforeAll
-    public static void setUp()  {
+    public static void setUp() {
         Configuration.baseUrl = CONFIG.getBaseUrl();
         Configuration.timeout = CONFIG.getTimeout();
         Configuration.browserVersion = CONFIG.getBrowserVersion();
@@ -50,13 +48,10 @@ public class BaseTest {
         Configuration.fastSetValue = true;
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
-                "enableVideo", true
+                "enableVideo", false
         ));
         Configuration.browserCapabilities = capabilities;
-
-
     }
-
     @BeforeEach
     public void begin() {
 //        SelenideLogger.addListener(ALLURE, new AllureSelenide()
@@ -67,13 +62,11 @@ public class BaseTest {
 //                .enableLogs(LogType.SERVER, Level.SEVERE)
 //                .enableLogs(LogType.PERFORMANCE, Level.SEVERE));
     }
-
     @AfterEach
     @Step("Close window")
     public void tearDown() {
         Selenide.closeWindow();
 //        SelenideLogger.removeListener(ALLURE);
     }
-
 }
 

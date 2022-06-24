@@ -5,7 +5,6 @@ import org.apache.commons.lang3.RandomStringUtils;
 
 import static com.codeborne.selenide.Selenide.$;
 
-
 public class CreateAccountPage {
     static SelenideElement gender = $("#uniform-id_gender1");
     static SelenideElement firstName = $("#customer_firstname");
@@ -30,7 +29,7 @@ public class CreateAccountPage {
     static SelenideElement alias = $("#alias");
     static SelenideElement submitAccount = $("#submitAccount");
 
-    public void createAccount(String name, String lname, String pass, String addressname, String addresslname) {
+    public static void createAccount(String name, String lname, String pass, String addressname, String addresslname) {
 
         gender.click();
         firstName.sendKeys(name);
@@ -57,5 +56,4 @@ public class CreateAccountPage {
         alias.setValue("18, Baker street");
         submitAccount.click();
     }
-
 }

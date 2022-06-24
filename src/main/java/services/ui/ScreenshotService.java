@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 
 public class ScreenshotService {
 
-  private static final UiTestExecutor UI_TEST_EXECUTOR = UiTestExecutorFactory.getInstance().get(UiTestExecutor.UiExecutorType.UPDATE);
+  private static final UiTestExecutor UI_TEST_EXECUTOR = UiTestExecutorFactory.getInstance().get(UiTestExecutor.UiExecutorType.COMPARE);
 
 
   private ScreenshotService() {

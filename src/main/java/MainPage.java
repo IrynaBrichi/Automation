@@ -6,8 +6,6 @@ public class MainPage {
     SelenideElement signInButton = $(".login");
 
     public void clickSignIn() {
-
         signInButton.click();
-
     }
 }

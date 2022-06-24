@@ -10,5 +10,4 @@ public class SignOutPage {
     public static void LogOut() {
         logOut.click();
     }
-
 }

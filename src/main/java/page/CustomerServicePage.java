@@ -14,7 +14,6 @@ public class CustomerServicePage {
     static SelenideElement messageContactUs = $("#message");
     static SelenideElement submitContactUs = $("#submitMessage");
 
-
     public static void customerServiceContactUsPage() {
         contactUs.click();
         customerService.sendKeys("Customer service");

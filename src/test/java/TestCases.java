@@ -42,14 +42,13 @@ public class TestCases extends BaseTest {
     public void createAccount() {
         Configuration.browserSize = "1920x1080";
         Selenide.open("http://automationpractice.com/index.php");
-        uiExecutor($("#htmlcontent_top > ul > li.htmlcontent-item-1.col-xs-4 > a > img"), Feature.EXAMPLE, By.cssSelector(".login"));
+        //uiExecutor($("#htmlcontent_top > ul > li.htmlcontent-item-1.col-xs-4 > a > img"), Feature.EXAMPLE, By.cssSelector(".login"));
         mainPage.clickSignIn();
         uiExecutor(Feature.EXAMPLE_2);
         LoginPage loginPage = new LoginPage();
         CreateAccountPage createAccountPage = loginPage.login("ira@gmail.com");
         createAccountPage.createAccount("Irina", "Bri", "qwerty6", "qa", "qa1");
     }
-
 
     @Test
     @Order(3)
@@ -89,7 +88,6 @@ public class TestCases extends BaseTest {
                         "OK",
                 $(".fancybox-inner").getText());
         okBtn();
-
     }
 
     @Test
@@ -113,16 +111,15 @@ public class TestCases extends BaseTest {
         Selenide.open("http://automationpractice.com/index.php");
         selectSummerDress();
         selectPrintedSummerDressesWithFourColor();
-        uiExecutor(Feature.EXAMPLE);
+        //uiExecutor(Feature.EXAMPLE);
         uiExecutor(Feature.EXAMPLE);
         selectBlackColor();
-        Assertions.assertTrue(Selenide.$(".color_pick.selected").exists());
+        Assertions.assertTrue(Selenide.element(".color_pick.selected").exists());
         selectOrangeColor();
-        Assertions.assertTrue(Selenide.$(".color_pick.selected").exists());
+        Assertions.assertTrue(Selenide.element(".color_pick.selected").exists());
         selectBlueColor();
-        Assertions.assertTrue(Selenide.$(".color_pick.selected").exists());
+        Assertions.assertTrue(Selenide.element(".color_pick.selected").exists());
         selectYellowColor();
-        Assertions.assertTrue(Selenide.$(".color_pick.selected").exists());
-
+        Assertions.assertTrue(Selenide.element(".color_pick.selected").exists());
     }
 }

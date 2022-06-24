@@ -17,7 +17,6 @@ public class SummerDressPage {
         selectorPrintedSummerDresses.hover();
         MoreBtn.click();
     }
-
     public static void selectBlackColor() {
         blackColor.click();
     }

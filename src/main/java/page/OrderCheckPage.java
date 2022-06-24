@@ -41,6 +41,5 @@ public class OrderCheckPage {
             payment.click();
             confirmation.click();
         }
-
 }
 

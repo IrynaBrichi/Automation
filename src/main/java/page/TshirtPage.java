@@ -19,7 +19,6 @@ public class TshirtPage {
     public static SelenideElement commentAddedText = $x("//*[text()='Your comment has been added and will be available once approved by a moderator']");
     public static SelenideElement windowClose = $("#id_new_comment_form");
 
-
     public static void selectTshirt() {
         tshirt.click();
     }
